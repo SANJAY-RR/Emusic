@@ -1,0 +1,129 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<h1 class="text-center my-4">Choose Your Subscription Plan</h1>
+    <div class="subscription-container">
+        <div class="container">
+            
+            <div class="row justify-content-center">
+                <!-- Premium Plan -->
+                <div class="col-sm-6 col-md-4 col-lg-3 subscription-box">
+                    <h3>Premium</h3>
+                    <p>₹10,000/month</p>
+                    <ul>
+                        <li>Ad-free listening</li>
+                        <li>High-quality audio</li>
+                        <li>Unlimited songs download</li>
+                        <li>Offline listening</li>
+                    </ul>
+                    <a href="subscribe.html" class="btn btn-primary">Subscribe Now</a>
+                </div>
+
+                <!-- Standard Plan -->
+                <div class="col-sm-6 col-md-4 col-lg-3 subscription-box">
+                    <h3>Standard</h3>
+                    <p>₹5,000/month</p>
+                    <ul>
+                        <li>Ad-free listening</li>
+                        <li>High-quality audio</li>
+                        <li>Limited songs download</li>
+                        <li> online listening</li>
+                    </ul>
+                    <a href="subscribe.html" class="btn btn-primary">Subscribe Now</a>
+                </div>
+
+                <!-- Basic Plan -->
+                <div class="col-sm-6 col-md-4 col-lg-3 subscription-box">
+                   <B> <h3>Basic</h3>
+                    <p>₹3,500/month</p>
+                    <ul>
+                        <li>Ad-free listening</li>
+                        <li>Standard quality</li>
+                        <li>Limited songs download</li>
+                        <li> online listening</li></B>
+                    </ul>
+                    <a href="subscribe.html" class="btn btn-primary">Subscribe Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+<style>
+    /* Flexbox Layout for Centering Content */
+    .subscription-container {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000; /* Light background */
+        margin-top: 20px; /* Move the container 20px down */
+    }
+
+    /* Styling for subscription boxes */
+    .subscription-box {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        text-align: center;
+        background-color: #000;
+        color: white;
+        box-shadow: 0 4px 15px rgba(0, 0, 0,0.1);
+        width: 100%; /* Make the box full width inside the column */
+        max-width: 350px; /* Set a max width for each box */
+        height: auto;  /* Automatically adjust height */
+        margin: 10px;
+    }
+
+    /* Plan Heading */
+    .subscription-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    /* Subscription Price */
+    .subscription-box p {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    /* Styling the List */
+    .subscription-box ul {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .subscription-box ul li {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    /* Button Styling */
+    .subscription-box .btn {
+        background-color: #007bff;
+        border-color: #007bff;
+        transition: background-color 0.3s ease;
+    }
+
+    .subscription-box .btn:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+
+    /* Responsive Layout - Ensure boxes stay in a row */
+    .row {
+        display: flex;
+        justify-content: center; /* Center the row */
+        flex-wrap: wrap; /* Allow wrapping on small screens */
+    }
+
+    /* Optional: Add some space for mobile screens */
+    @media (max-width: 767px) {
+        .subscription-box {
+            width: 100%; /* Full width for mobile */
+            margin-bottom: 20px;
+        }
+    }
+</style>

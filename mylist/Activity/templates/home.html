@@ -1,0 +1,97 @@
+<!-- extending template, e.g., home.html -->
+{% extends "index.html" %}
+{% load static %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<center><h3 class="white-box">Genre</h3></center>
+<br>
+<div class="homesimg">
+<div class="container mt-4">
+    <div class="row justify-content-center image-row">
+        <div class="col-md-3 text-center">
+        
+            <a href="https://open.spotify.com/genre/0JQ5DAqbMKFQ00XGBls6ym"><img src="{% static 'images/hippop.jpeg' %}" alt="Hip" class="img-fluid styled-img"></a>
+        </div>
+        <div class="col-md-3 text-center">
+            <a href="https://open.spotify.com/genre/0JQ5DAqbMKFEC4WFtoNRpw"><img src="{% static 'images/pop.png' %}" alt="Pop" class="img-fluid styled-img"></a>
+    </div>
+    <div class="col-md-3 text-center">
+        <a href="https://open.spotify.com/album/4KaUcZjcdOZAY2xPAQxR37"><img src="{% static 'images/rap.jpg' %}" alt="Melody" class="img-fluid styled-img"></a>
+    </div>
+    <div class="col-md-3 text-center">
+        <a href="https://open.spotify.com/playlist/4BME5NDpshjSW4Gxsnpyul"><img src="{% static 'images/melody.jpeg' %}" alt="Rap" class="img-fluid styled-img"></a>
+    </div>
+    </div>
+    <br>
+    <hr>
+    <center><h3 class="white-box">Language</h3></center>
+    <br>
+
+    <div class="row justify-content-center image-row">
+        <div class="col-md-3 text-center">
+        
+        <a href="https://open.spotify.com/genre/0JQ5DAqbMKFE33XAyDiPIr"><img src="{% static 'images/tamil.jpg' %}" alt="Hip" class="img-fluid styled-img"></a>
+        </div>
+        <div class="col-md-3 text-center">
+            <a href="https://open.spotify.com/playlist/5muSk2zfQ3LI70S64jbrX7"><img src="{% static 'images/english.jpg' %}" alt="Pop" class="img-fluid styled-img"></a>
+    </div>
+    <div class="col-md-3 text-center">
+        <a href="https://open.spotify.com/genre/0JQ5DAqbMKFIdOwkMWR5at"><img src="{% static 'images/telugu.jpg' %}" alt="Melody" class="img-fluid styled-img"></a>
+    </div>
+    <div class="col-md-3 text-center">
+        <a href="https://open.spotify.com/genre/0JQ5DAqbMKFHCxg5H5PtqW"><img src="{% static 'images/hindhi.jpg' %}" alt="Rap" class="img-fluid styled-img"></a>
+    </div>
+    </div>
+    <br>
+    <hr>
+    <center><h3 class="white-box">Artist</h3></center>
+    <br>
+
+    <div class="row justify-content-center image-row">
+        <div class="col-md-3 text-center">
+        
+            <a href="https://open.spotify.com/artist/1mYsTxnqsietFxj1OgoGbG"><img src="{% static 'images/arr.jpg' %}" alt="Hip" class="img-fluid styled-img"></a>
+        </div>
+        <div class="col-md-3 text-center">
+            <a href="https://open.spotify.com/artist/4zCH9qm4R2DADamUHMCa6O"><img src="{% static 'images/ani.jpg' %}" alt="Pop" class="img-fluid styled-img"></a>
+    </div>
+    <div class="col-md-3 text-center">
+        <a href="https://open.spotify.com/artist/6AiX12wXdXFoGJ2vk8zBjy"><img src="{% static 'images/u1.jpg' %}" alt="Melody" class="img-fluid styled-img"></a>
+    </div>
+    <div class="col-md-3 text-center">
+        <a href="https://open.spotify.com/artist/5sSzCxHtgL82pYDvx2QyEU"><img src="{% static 'images/dsp.jpg' %}" alt="Rap" class="img-fluid styled-img"></a>
+    </div>
+    </div>
+    <br>
+    <br>
+</div>
+
+<style>
+    .styled-img{
+        height: 270px;
+        width: 180px;
+        box-shadow: 2px 2px 2px;
+    }
+    .homesimg{
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .white-box{
+
+        color: black;
+        background-color: aliceblue;
+        padding: 10px;
+        border: 1px solid #ccc;
+        display: inline-block;
+        text-align: center;
+        margin: 0 auto;
+        width: fit-content;
+    }
+</style>
+{% endblock %}

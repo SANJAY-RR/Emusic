@@ -1,0 +1,37 @@
+{% load static %}
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Other links and meta tags -->
+</head>
+<nav class="navbar navbar-inverse navbar-fixed-top color">
+    <div class="container">
+        <ul class="nav navbar-nav navbar-left">
+           <a href="{%url 'home'%}" class="navbar-brand"><i class="fas fa-music">  E-Music</i></a>
+           <li><a href="{% url 'spotify_auth' %}"><i class="fab fa-spotify"> Music</i></a></li>
+           
+            {% if user.is_authenticated %} 
+            <li><a href="{% url 'subscription' %}"><i class="fas fa-bell"> Subscription Pack</i></a></li>
+            {% endif %}
+            <li><a href="{% url 'contact' %}"><i class="fa fa-envelope"> Contact</i></a></li>
+            <li><a href="{% url 'about' %}"><i class="fas fa-book"> About US</i></a></li>
+
+
+        </ul>
+            
+        <ul class="nav navbar-nav navbar-right">
+            {% if user.is_authenticated %}
+
+            <li><a href="{% url 'profile' %}"><i class="fa fa-user"> Profile</i></a></li>
+            <li><a href="{% url 'logout' %}"><i class="fa fa-user"> Logout</i></a></li>
+            {% else %}
+            <li><a href="{% url 'login' %}"><i class="fa fa-user"> Login</i></a></li>
+            <li><a href="{% url 'register' %}"><i class="fa fa-users"> Register</i></a></li>
+            {% endif %}
+    
+
+        </ul>
+        
+
+    </div>
+
+</nav>

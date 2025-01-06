@@ -1,0 +1,64 @@
+
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to Spotify</title>
+    
+    <!-- Bootstrap 4 CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <script type="text/javascript">
+        // Redirect to Spotify after 3 seconds
+        setTimeout(function() {
+            window.location.href = 'https://www.spotify.com';
+        }, 3000);
+    </script>
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .btn-primary {
+            background-color: #1DB954;
+            border-color: #1DB954;
+        }
+        .btn-primary:hover {
+            background-color: #1ed760;
+            border-color: #1ed760;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-4">Redirecting...</h1>
+        <p class="lead">You will be redirected to Spotify in <strong>3 seconds</strong>.</p>
+        <hr>
+        <p>If the page does not automatically redirect, you can <a href="https://www.spotify.com" class="btn btn-primary btn-lg">click here</a>.</p>
+    </div>
+
+    <!-- Bootstrap 4 JS and Popper.js (required for certain components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+{% endblock %}
